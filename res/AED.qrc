@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>flatline.png</file>
+        <file>good-case.png</file>
+        <file>Panel.png</file>
+        <file>red-circle.png</file>
+        <file>power-on.png</file>
+        <file>power-off.png</file>
+        <file>good-case.png</file>
+        <file>v-fib.png</file>
+        <file>v-tach.png</file>
+    </qresource>
+</RCC>

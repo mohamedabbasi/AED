@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1208</width>
+    <height>648</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font-family: Arial;
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QFrame" name="mainFrame">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QFrame" name="deviceFrame">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>10</y>
+         <width>691</width>
+         <height>511</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QFrame" name="displayFrame">
+        <property name="geometry">
+         <rect>
+          <x>214</x>
+          <y>124</y>
+          <width>205</width>
+          <height>118</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #d1d3d4;
+border-radius: 10px;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QFrame" name="compressionDepth">
+         <property name="geometry">
+          <rect>
+           <x>182</x>
+           <y>20</y>
+           <width>20</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(0, 0, 0);
+border-radius: 0px;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="mainScreenDisplay">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>22</y>
+           <width>138</width>
+           <height>79</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 15px;
+font-size: 15px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>:/Normal-hb.png</pixmap>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QProgressBar" name="batteryLevel">
+         <property name="geometry">
+          <rect>
+           <x>162</x>
+           <y>96</y>
+           <width>35</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(153, 193, 241)</string>
+         </property>
+         <property name="value">
+          <number>100</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="shocksLabel">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>1</y>
+           <width>61</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>SHOCKS:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="timeElapsed">
+         <property name="geometry">
+          <rect>
+           <x>163</x>
+           <y>1</y>
+           <width>33</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Time</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="shockCounter">
+         <property name="geometry">
+          <rect>
+           <x>74</x>
+           <y>-1</y>
+           <width>20</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="minCPR">
+         <property name="geometry">
+          <rect>
+           <x>162</x>
+           <y>60</y>
+           <width>16</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>2&quot;</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="cprValue">
+         <property name="geometry">
+          <rect>
+           <x>158</x>
+           <y>73</y>
+           <width>23</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="Line" name="minCPRLine">
+         <property name="geometry">
+          <rect>
+           <x>173</x>
+           <y>70</y>
+           <width>29</width>
+           <height>1</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(192, 28, 40);</string>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="Line" name="cprLine">
+         <property name="geometry">
+          <rect>
+           <x>178</x>
+           <y>85</y>
+           <width>25</width>
+           <height>1</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(46, 194, 126);</string>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="shockButton">
+        <property name="geometry">
+         <rect>
+          <x>330</x>
+          <y>260</y>
+          <width>71</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+
+
+border-radius: 20px;
+border-style: outset;
+background: transparent;
+padding: 5px;
+}
+
+
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="powerButton">
+        <property name="geometry">
+         <rect>
+          <x>560</x>
+          <y>420</y>
+          <width>71</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">image: url(:/power-on.png);
+background-color: #515f6c;
+border-radius: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="adminPanelDisplay">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>701</width>
+         <height>511</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="../res/AED.qrc">:/Panel.png</pixmap>
+       </property>
+      </widget>
+      <widget class="QFrame" name="adminDisplayFrame">
+       <property name="geometry">
+        <rect>
+         <x>700</x>
+         <y>0</y>
+         <width>221</width>
+         <height>511</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(81, 95, 108);
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QLineEdit" name="adminPage">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>201</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);
+background-color: rgb(181, 235, 223);</string>
+        </property>
+        <property name="text">
+         <string>                   Admin Page</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="badCaseButton">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>50</y>
+          <width>201</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(165, 255, 228);</string>
+        </property>
+        <property name="text">
+         <string>Bad Case</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="goodCaseButton">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>90</y>
+          <width>201</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(165, 255, 228);</string>
+        </property>
+        <property name="text">
+         <string>Good Case</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="rechargeBattery">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>130</y>
+          <width>201</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(165, 255, 228);</string>
+        </property>
+        <property name="text">
+         <string>Recharge Battery</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="nodePlacement">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>210</y>
+          <width>201</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(165, 255, 228);</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>True</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>False</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="nodeLabel">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>180</y>
+          <width>201</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Node Placement:</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="ageGroupLabel_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>280</y>
+          <width>201</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(165, 255, 228);</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>Adult</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Child</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Infant</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="ageGroupLabel">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>250</y>
+          <width>201</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Age group of patient:</string>
+        </property>
+       </widget>
+      </widget>
+      <zorder>adminPanelDisplay</zorder>
+      <zorder>deviceFrame</zorder>
+      <zorder>adminDisplayFrame</zorder>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1208</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../res/AED.qrc"/>
+ </resources>
+ <connections/>
+</ui>
